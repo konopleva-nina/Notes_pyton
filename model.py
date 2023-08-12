@@ -12,8 +12,8 @@ class Notes:
           with open(self._path, 'r', encoding='UTF-8') as file:
             data = file.readlines()
             for note in data:
-              note = note.strip().split(';')
-              self._notes.append({'id': note[0], 'datetime': note[1], 'title': note[2], 'note': note[3]})
+                note = note.strip().split(';')
+                self._notes.append({'id': note[0], 'datetime': note[1], 'title': note[2], 'note': note[3]})
 
     def save_notes(self):
         data = []
@@ -49,11 +49,11 @@ class Notes:
         return result
 
     def change_notes(self, note: dict[str, str], index: int):
-      with suppress(Exception):
-        if len(note['title']) > 0:
-            self._notes[index-1]['title'] = note['title']
-      with suppress(Exception):
-        if len(note['note']) > 0:
-            self._notes[index-1]['note'] = note['note']
-      with suppress(Exception):
-        self._notes[index-1]['datetime'] = note['datetime']
+        with suppress(Exception):
+            if len(note['title']) > 0:
+                self._notes[index-1]['title'] = note['title']
+        with suppress(Exception):
+            if len(note['note']) > 0:
+                self._notes[index-1]['note'] = note['note']
+        with suppress(Exception):
+            self._notes[index-1]['datetime'] = note['datetime']
