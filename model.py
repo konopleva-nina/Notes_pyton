@@ -12,8 +12,8 @@ class Notes:
           with open(self._path, 'r', encoding='UTF-8') as file:
             data = file.readlines()
             for note in data:
-              note = note.strip().split(';')
-              self._notes.append({'id': note[0], 'datetime': note[1], 'title': note[2], 'note': note[3]})
+                note = note.strip().split(';')
+                self._notes.append({'id': note[0], 'datetime': note[1], 'title': note[2], 'note': note[3]})
 
     def save_notes(self):
         data = []
