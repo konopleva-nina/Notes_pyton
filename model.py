@@ -49,11 +49,11 @@ class Notes:
         return result
 
     def change_notes(self, note: dict[str, str], index: int):
-      with suppress(Exception):
-        if len(note['title']) > 0:
-            self._notes[index-1]['title'] = note['title']
-      with suppress(Exception):
-        if len(note['note']) > 0:
-            self._notes[index-1]['note'] = note['note']
-      with suppress(Exception):
-        self._notes[index-1]['datetime'] = note['datetime']
+        with suppress(Exception):
+            if len(note['title']) > 0:
+                self._notes[index-1]['title'] = note['title']
+        with suppress(Exception):
+            if len(note['note']) > 0:
+                self._notes[index-1]['note'] = note['note']
+        with suppress(Exception):
+            self._notes[index-1]['datetime'] = note['datetime']

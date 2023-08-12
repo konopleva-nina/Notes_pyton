@@ -21,13 +21,13 @@ new_notes = {'title': 'Введите заголовок заметки: ',
                'note': 'Введите текст заметки: '}
 
 def new_note_successful(title: str):
-		return f'Заметка {title} успешно добавлена.'
+	return f'Заметка {title} успешно добавлена.'
 
 cancel_input = 'Отмена ввода'
 
 index_del_note = 'Введите индекс заметки, которую хотите удалить: '
 def del_note(title: str):
-		return f'Заметка {title} успешно удалёна!'
+	return f'Заметка {title} успешно удалёна!'
 
 input_change = 'Какую заметку хотите изменить: '
 input_index = 'Введите индекс заметки: '
